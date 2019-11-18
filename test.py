@@ -1,0 +1,22 @@
+import numpy as np
+
+data=np.random.randint(5,size=5)
+mat=np.random.randint(5,size=(5,5))
+print('随机出来的矩阵是:')
+print(mat)
+#======================================
+print('随机出来的一维数组是:')
+print(data)
+print('一维数组的维数为：'+str(np.shape(data)))
+print('一维数组转置是不变滴：')
+print(data.T)
+print('一维数组的内积是一个数：')
+print(np.dot(data,data.T))
+print('转变成1维行向量是：')
+print(data.reshape(1,5))
+print('转变成1维列向量是：')
+print(data.reshape(5,1))
+print('行列向量进行矩阵相乘：')
+print(np.dot(data.reshape(5,1),data.reshape(1,5)))
+print('向量和矩阵进行矩阵乘法：')
+print(np.dot(mat,data.reshape(5,1)))
